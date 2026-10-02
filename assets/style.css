@@ -1,0 +1,500 @@
+:root {
+  --bg: #f5f1ec;
+  --bg-soft: #faf7f3;
+  --card: #fcfaf7;
+  --text: #2f3440;
+  --muted: #69707d;
+  --border: #d9d0c7;
+
+  --rose: #d9c8c4;
+  --sage: #c5cdc2;
+  --blue: #c8d2d8;
+  --sand: #ddd3c5;
+  --mauve: #d8d0d5;
+  --olive: #cfd4cb;
+  --clay: #ddd2ca;
+
+  --proposed-bg: #e7ddd6;
+  --proposed-border: #bca99b;
+
+  --shadow: 0 10px 28px rgba(78, 68, 58, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Inter,
+    Arial,
+    sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, #faf6f1 0%, #f5f1ec 42%, #f0ebe5 100%);
+  line-height: 1.6;
+}
+
+.page-shell {
+  width: min(1760px, calc(100% - 32px));
+  margin: 16px auto 48px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #faf6f1 0%, #f2ebe5 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 30px 34px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.hero-centered {
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--rose);
+  color: #4b4f58;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.paper-title {
+  margin: 0 auto 10px;
+  max-width: 1200px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.demo-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4f5661;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.hero-text-centered {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.case-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.case-header {
+  padding: 18px 28px 12px;
+  background: linear-gradient(135deg, #f8f3ee 0%, #f3ece6 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.compact-case-header {
+  padding: 18px 28px 12px;
+}
+
+.case-index {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: #465044;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reference-panel {
+  margin: 20px 28px 18px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e8edf1 0%, #eef2f4 100%);
+  border: 1px solid #d5dde3;
+}
+
+.reference-title {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.reference-caption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.reference-panel audio {
+  width: min(100%, 760px);
+}
+
+.systems-strip-wrap {
+  padding: 4px 28px 24px;
+}
+
+/* 9 systems fully visible without horizontal scroll */
+.systems-strip {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 14px;
+  overflow: visible;
+  padding: 2px 0 0;
+}
+
+.method-card {
+  min-height: 138px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 14px 14px 12px;
+  box-shadow: 0 4px 14px rgba(72, 63, 55, 0.05);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(72, 63, 55, 0.08);
+}
+
+.theme-0 { background: #ede4dc; }
+.theme-1 { background: #e6e0d8; }
+.theme-2 { background: #dfe6eb; }
+.theme-3 { background: #ece2dc; }
+.theme-4 { background: #e5dde2; }
+.theme-5 { background: #e8e3db; }
+.theme-6 { background: #dee4df; }
+.theme-7 { background: #e9dfd6; }
+.theme-8 { background: #e7dfd9; }
+
+.method-card.proposed {
+  background: linear-gradient(135deg, #e9dfd8 0%, #e2d5cc 100%);
+  border: 1.5px solid var(--proposed-border);
+  box-shadow: 0 8px 22px rgba(96, 76, 61, 0.12);
+}
+
+.method-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.method-name {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.citation-inline {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  color: #71716e;
+  background: transparent;
+  border: 0;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: super;
+}
+
+.method-card.proposed .method-name {
+  color: #493d35;
+  font-weight: 850;
+}
+
+.method-card audio {
+  width: 100%;
+  height: 36px;
+}
+
+.references-section {
+  margin-top: 28px;
+  background: linear-gradient(135deg, #faf6f1 0%, #f3ede6 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+}
+
+.references-section h2 {
+  margin: 0 0 14px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.reference-list {
+  margin: 0;
+  padding-left: 22px;
+  color: #444b57;
+}
+
+.reference-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.page-footer {
+  padding: 18px 8px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Responsive fallback */
+@media (max-width: 1600px) {
+  .systems-strip {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .systems-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .paper-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 780px) {
+  .page-shell {
+    width: min(100% - 14px, 1760px);
+  }
+
+  .hero {
+    padding: 22px 18px;
+  }
+
+  .paper-title {
+    font-size: 24px;
+  }
+
+  .demo-title {
+    font-size: 20px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .case-header {
+    padding: 16px 18px 10px;
+  }
+
+  .reference-panel {
+    margin: 16px 18px 16px;
+    padding: 16px;
+  }
+
+  .systems-strip-wrap {
+    padding: 4px 18px 20px;
+  }
+
+  .systems-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .references-section {
+    padding: 20px 18px;
+  }
+}
+
+/* ===== Compact system cards ===== */
+
+.method-card {
+  min-height: 102px;
+  padding: 12px 12px 10px;
+  border-radius: 17px;
+}
+
+.method-head {
+  margin-bottom: 9px;
+  gap: 3px;
+}
+
+.method-name {
+  font-size: 12.5px;
+  line-height: 1.1;
+}
+
+.citation-inline {
+  font-size: 9px;
+}
+
+.method-card audio {
+  width: 100%;
+  height: 34px;
+}
+
+/* Slightly reduce spacing around the system row */
+.systems-strip-wrap {
+  padding-top: 2px;
+  padding-bottom: 18px;
+}
+
+.systems-strip {
+  gap: 13px;
+}
+
+/* Reference panel can also be a little more compact */
+.reference-panel {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.reference-title {
+  margin-bottom: 3px;
+}
+
+.reference-caption {
+  margin-bottom: 7px;
+}
+
+
+/* ===== Compact bibliography ===== */
+
+.references-section {
+  padding: 22px 28px 18px;
+}
+
+.references-section h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.reference-list {
+  padding-left: 24px;
+}
+
+.reference-list li {
+  margin-bottom: 7px;
+  padding-left: 4px;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.reference-list em {
+  font-weight: 500;
+}
+
+
+/* ===== Compact target-reference panel ===== */
+
+.reference-panel {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.reference-title {
+  margin-bottom: 8px;
+}
+
+.reference-caption {
+  display: none;
+}
+
+
+/* =========================================================
+   Source + Target reference layout
+   ========================================================= */
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+
+  margin:
+    18px
+    28px
+    18px;
+}
+
+.reference-card {
+  padding:
+    13px
+    18px
+    14px;
+
+  border-radius: 18px;
+  border: 1px solid;
+}
+
+.reference-card-source {
+  background: #eee8e1;
+  border-color: #ddd2c7;
+}
+
+.reference-card-target {
+  background: #e7edf1;
+  border-color: #d1dce3;
+}
+
+.reference-card .reference-title {
+  margin:
+    0
+    0
+    8px;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.reference-card audio {
+  display: block;
+
+  width: min(
+    100%,
+    680px
+  );
+
+  height: 38px;
+}
+
+/* Hide any old reference panel, if old CSS remains. */
+.reference-panel {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .reference-grid {
+    grid-template-columns: 1fr;
+
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
+

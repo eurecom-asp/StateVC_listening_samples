@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+private_admin/
+private_trial_key.csv
+Responses*
+Sessions*
+Completions*
+*.xlsx
+*.csv
+*.env
